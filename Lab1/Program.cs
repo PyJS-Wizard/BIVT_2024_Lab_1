@@ -256,7 +256,7 @@ public class Program
 
         int answerPower = (int) Math.Floor(Math.Log10(answer));
         double answerMantissa = answer / Math.Pow(10, answerPower); 
-        return (Math.Round(answerMantissa, 2), answerPower); // IMPORTANT: проверь после исправления тестов!
+        return (Math.Round(answerMantissa, 2), answerPower); 
     }
     public double Task_1_17(double x) {
 
@@ -288,7 +288,7 @@ public class Program
             curElement = Math.Cos(n * x) / (n * n);
         }
 
-        return Math.Round(sum, 2); // IMPORTANT: find out the problem cause
+        return Math.Round(sum, 2); 
     }
     public int Task_2_2()
     {
@@ -305,7 +305,7 @@ public class Program
     }
     public int Task_2_3(double a, double h, double p)
     {           
-        if (a < p && h < 0) return 0; // IMPORTANT: workaround on infinity loop
+        if (a < p && h < 0) return 0;
         
         int n = 0;
         double sum = 0;
@@ -381,7 +381,7 @@ public class Program
     {
 
         double curDistance = 10, totalDistance = 10;
-        int daysCount = 1; // IMPORTANT: выясни 0 или 1
+        int daysCount = 1;
 
         while (totalDistance < 100) {
             curDistance *= 1.1;
@@ -395,7 +395,7 @@ public class Program
     {
 
         double curDistance = 10;
-        int daysCount = 0; // IMPORTANT: выясни 0 или 1
+        int daysCount = 0;
 
         while (curDistance <= 20) {
             curDistance *= 1.1;
@@ -496,7 +496,7 @@ public class Program
     public (double, double) Task_3_4(double x)
     {
         double S = 0, y = (1 + 2 * x * x) * Math.Pow(Math.E, x * x);
-        int i = 0; // IMPORTANT: probably test error (i = 0 instead of possible mistake of i = 1)
+        int i = 0;
         double curElement = (2 * i + 1) * Math.Pow(x, 2 * i) / Factorial(i);
         
         while (Math.Abs(curElement) >= 0.0001) {
@@ -537,7 +537,7 @@ public class Program
             curElement = Math.Pow(-1, i + 1) * Math.Pow(x, 2 * i + 1) / (4 * i * i - 1);
 
         }
-        return (Math.Round(S, 2), Math.Round(y, 2)); // IMPORTANT: again the problem with rounding
+        return (Math.Round(S, 2), Math.Round(y, 2));
     }
     public (double, double) Task_3_7(double x)
     {
