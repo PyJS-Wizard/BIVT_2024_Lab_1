@@ -468,12 +468,12 @@ public class Program
     {
         double S = 0, y = x * Math.Sin(Math.PI / 4) / (1 - 2 * x * Math.Cos(Math.PI / 4) + x * x);
         int i = 1;
-        double curElement = Math.Pow(x, i) * Math.Sin(i * Math.PI / 4);
+        double curElement = Math.Pow(x, i); // * Math.Sin(i * Math.PI / 4);
         
         while (Math.Abs(Math.Pow(x, i)) >= 0.0001) {
             S += curElement;
             i++;
-            curElement = Math.Pow(x, i) * Math.Sin(i * Math.PI / 4);
+            curElement = Math.Pow(x, i); // * Math.Sin(i * Math.PI / 4);
         }
 
         return (Math.Round(S, 2), Math.Round(y, 2));
